@@ -8,8 +8,8 @@ import {
 
 // Create an OpenAI API client (that's edge friendly!)
 const openai = new OpenAI({
-  baseURL: process.env.OPENAI_BASE_URL,
-  apiKey: process.env.OPENAI_API_KEY,
+  baseURL: process.env.OPENAI_BASE_URL ?? "https://api.openai.com/v1",
+  apiKey: process.env.OPENAI_API_KEY ?? "",
 });
 
 export const runtime = "edge";
@@ -79,7 +79,6 @@ export async function POST(req: Request) {
 }
 
 
-  // check if the conversation requires a function call to be made
   const initialResponse = await openai.chat.completions.create({
     model: "gpt-4o-mini-2024-07-18",
     messages,
@@ -88,7 +87,6 @@ export async function POST(req: Request) {
     temperature: 0,
   });
 
-  // @ts-ignore
   const stream = OpenAIStream(initialResponse);
 
 

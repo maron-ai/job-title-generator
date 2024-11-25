@@ -44,11 +44,11 @@ export default function JobTitleChat() {
     <div className="w-full max-w-xl mx-auto">
       {showInput ? (
         <div className="p-6">
-          <h2 className="mb-4 text-xl font-medium text-center">Enter current job title</h2>
+          <h2 className="mb-4 text-xl font-medium text-center">Enter your current job title</h2>
           <form onSubmit={handleSubmit} className="relative">
             <Input
               ref={inputRef}
-              placeholder="Software Developer @ Company"
+              placeholder="Software Engineer @ Company"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="pr-12"

@@ -1,4 +1,8 @@
-# Turborepo starter with shadcn/ui
+# Job Title Generator
+
+A simple ui generated with v0 and using gpt-4o-mini to generate a new job title based on the current one.
+
+# Turborepo Starter with shadcn/ui Dodcs
 
 ![Static Badge](https://img.shields.io/badge/shadcn%2Fui-2.1.2-blue?link=https%3A%2F%2Fgithub.com%2Fshadcn%2Fui)
 
